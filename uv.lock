@@ -1,5 +1,9 @@
 version = 1
 requires-python = ">=3.11"
+resolution-markers = [
+    "python_full_version < '3.12'",
+    "python_full_version >= '3.12'",
+]
 
 [[package]]
 name = "appnope"
@@ -184,6 +188,7 @@ dependencies = [
     { name = "ipykernel" },
     { name = "matplotlib" },
     { name = "numpy" },
+    { name = "pywavelets" },
 ]
 
 [package.metadata]
@@ -191,6 +196,7 @@ requires-dist = [
     { name = "ipykernel", specifier = ">=6.29.5" },
     { name = "matplotlib", specifier = ">=3.9.2" },
     { name = "numpy", specifier = ">=2.1.2" },
+    { name = "pywavelets", specifier = ">=1.7.0" },
 ]
 
 [[package]]
@@ -591,8 +597,6 @@ version = "6.1.0"
 source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/26/10/2a30b13c61e7cf937f4adf90710776b7918ed0a9c434e2c38224732af310/psutil-6.1.0.tar.gz", hash = "sha256:353815f59a7f64cdaca1c0307ee13558a0512f6db064e92fe833784f08539c7a", size = 508565 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/da/2b/f4dea5d993d9cd22ad958eea828a41d5d225556123d372f02547c29c4f97/psutil-6.1.0-cp27-none-win32.whl", hash = "sha256:9118f27452b70bb1d9ab3198c1f626c2499384935aaf55388211ad982611407e", size = 246648 },
-    { url = "https://files.pythonhosted.org/packages/9f/14/4aa97a7f2e0ac33a050d990ab31686d651ae4ef8c86661fef067f00437b9/psutil-6.1.0-cp27-none-win_amd64.whl", hash = "sha256:a8506f6119cff7015678e2bce904a4da21025cc70ad283a53b099e7620061d85", size = 249905 },
     { url = "https://files.pythonhosted.org/packages/01/9e/8be43078a171381953cfee33c07c0d628594b5dbfc5157847b85022c2c1b/psutil-6.1.0-cp36-abi3-macosx_10_9_x86_64.whl", hash = "sha256:6e2dcd475ce8b80522e51d923d10c7871e45f20918e027ab682f94f1c6351688", size = 247762 },
     { url = "https://files.pythonhosted.org/packages/1d/cb/313e80644ea407f04f6602a9e23096540d9dc1878755f3952ea8d3d104be/psutil-6.1.0-cp36-abi3-macosx_11_0_arm64.whl", hash = "sha256:0895b8414afafc526712c498bd9de2b063deaac4021a3b3c34566283464aff8e", size = 248777 },
     { url = "https://files.pythonhosted.org/packages/65/8e/bcbe2025c587b5d703369b6a75b65d41d1367553da6e3f788aff91eaf5bd/psutil-6.1.0-cp36-abi3-manylinux_2_12_i686.manylinux2010_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:9dcbfce5d89f1d1f2546a2090f4fcf87c7f669d1d90aacb7d7582addece9fb38", size = 284259 },
@@ -657,6 +661,44 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/66/c0/0c8b6ad9f17a802ee498c46e004a0eb49bc148f2fd230864601a86dcf6db/python-dateutil-2.9.0.post0.tar.gz", hash = "sha256:37dd54208da7e1cd875388217d5e00ebd4179249f90fb72437e91a35459a0ad3", size = 342432 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/ec/57/56b9bcc3c9c6a792fcbaf139543cee77261f3651ca9da0c93f5c1221264b/python_dateutil-2.9.0.post0-py2.py3-none-any.whl", hash = "sha256:a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427", size = 229892 },
+]
+
+[[package]]
+name = "pywavelets"
+version = "1.7.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "numpy" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/94/0a/c235e7dd60d136b14cd8793c440e8d22e7880df5588162feb02d6d6118a3/pywavelets-1.7.0.tar.gz", hash = "sha256:b47250e5bb853e37db5db423bafc82847f4cde0ffdf7aebb06336a993bc174f6", size = 3934767 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/df/30/4ab2547017bd6af02d916ce87e7fc55d08dbfe466b0440bea79a71b16ae4/pywavelets-1.7.0-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:392553248aed33eac6f38647acacdba94dd6a8f283319c2d9852de7a871d6d0f", size = 4315611 },
+    { url = "https://files.pythonhosted.org/packages/1e/77/b2c9976cbc7c378c72a8e7cff08a2ed49e26ef58e1a8fcaa523aadae5419/pywavelets-1.7.0-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:ae3ae86ba69d75327b1c5cd368138fb9329bc7eb7418d6b0ce9504c5070974ef", size = 4286338 },
+    { url = "https://files.pythonhosted.org/packages/7c/bd/e65c7d3a8e7e7b79ee77499fc1637c65c738c458a7f6469433b6050935c4/pywavelets-1.7.0-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:d81d2486e4f9b65f7c6cab252f3e706c8e8e72bbd0311f72c1a5ec56c947d257", size = 4446349 },
+    { url = "https://files.pythonhosted.org/packages/45/e9/3a047a49a6fd0917ba3e436ff93825f8cecc3cb55720d798bc71433a5433/pywavelets-1.7.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:05dc2930cf9b7f61a24b2fe52b18e9d6046012fc46fc360355222781a95a1378", size = 4482899 },
+    { url = "https://files.pythonhosted.org/packages/05/e8/63037524d8cc82f0fee1b744f41eaee9a8bd93c80de9b437a179fb258f0a/pywavelets-1.7.0-cp311-cp311-musllinux_1_2_aarch64.whl", hash = "sha256:8565de589f42283bca17ddca298f1188a26ef8ee75cadc4a4744cadf5a79cfdf", size = 4486261 },
+    { url = "https://files.pythonhosted.org/packages/9f/70/1e83a42a4084de2f3440a7af79adec69e52e679b13eb0ff8d787af330037/pywavelets-1.7.0-cp311-cp311-musllinux_1_2_x86_64.whl", hash = "sha256:8bdab6b1781f01c087c54782d656a4fc1df77796c241f122445adcbb24892839", size = 4516539 },
+    { url = "https://files.pythonhosted.org/packages/e7/14/1c197e0f2f657fd18c6db0281377ac8928abf232ab954a44efce82048670/pywavelets-1.7.0-cp311-cp311-win32.whl", hash = "sha256:c7b47d94aefe6e03085f4d9ce74f6133741164d470ac2839af9906686c6c2ed1", size = 4176201 },
+    { url = "https://files.pythonhosted.org/packages/81/49/ba85ea2acf08a113a17da37e6b8cdaa432ad3946fe6cc480fe98f20b5231/pywavelets-1.7.0-cp311-cp311-win_amd64.whl", hash = "sha256:3e3c8c0fa44f4de7bf05c5d12883b227aaf6dcf46deb3f6f5a9fa5bb79c33283", size = 4251738 },
+    { url = "https://files.pythonhosted.org/packages/72/48/b6dbb1124bfa15e2d16dc2c199562d0a9c3d7e7333348b29d05f68cdf146/pywavelets-1.7.0-cp312-cp312-macosx_10_9_x86_64.whl", hash = "sha256:badb7dc70ecd8042ddd98fdd41803d5e5b28bf7c90910bb1751906812326ab54", size = 4317328 },
+    { url = "https://files.pythonhosted.org/packages/9c/cf/b5b1706d7054d792bdf678c894f4ad8f8cdaa789f82b7eaa48b80aa45ba0/pywavelets-1.7.0-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:74e838e0225783f37ae346e60a9f783b4a31adc5731b9cb6d687ee5c93bd87b7", size = 4287220 },
+    { url = "https://files.pythonhosted.org/packages/05/a3/90cad7bfbd765f39bcd96af3efdefcf6fd05a49b7e81fc281f1be7a8e637/pywavelets-1.7.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:6ad14d8b5a412a621406276b8ae8ee1e369ba7a7f8e517fb87355bcb8106820f", size = 4420514 },
+    { url = "https://files.pythonhosted.org/packages/53/b6/08d5ea524a5ed25e1f94fba428ac605f0f774bea4a8cf14dbdc7947a2bc5/pywavelets-1.7.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:0bd2611076f5d2c4ad940421bbb3c450b6a53d8ca24bde02662455dc67c70dac", size = 4453780 },
+    { url = "https://files.pythonhosted.org/packages/f3/34/ad1502dc37295249000d3644c5bd183f5c063e9cebb3a37a9422121d77c1/pywavelets-1.7.0-cp312-cp312-musllinux_1_2_aarch64.whl", hash = "sha256:40ebb994b332d48db3b0564e3c335c4f8ba236283939f5167de099766cf16517", size = 4448531 },
+    { url = "https://files.pythonhosted.org/packages/f5/52/8e756c9783e7e7c43058cc3e9e9633935206ac77ff13580d489669d84b98/pywavelets-1.7.0-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:4a2a8cc39901f09d82fc94007026f9aed63876e334ae043eb26caa601aee2551", size = 4477268 },
+    { url = "https://files.pythonhosted.org/packages/ce/74/15942502ec146c0e06d3f62ebeeeb2cfa873b57413a44238171cc3658387/pywavelets-1.7.0-cp312-cp312-win32.whl", hash = "sha256:0cd599c78fc240cbadb63344d73912fc79e8dccbb0db8a8bd5143df400c3a519", size = 4171601 },
+    { url = "https://files.pythonhosted.org/packages/d6/bf/dc8836f983876a43cb15791f0ff15dab6631f423ca6ba55c068d8764ddf8/pywavelets-1.7.0-cp312-cp312-win_amd64.whl", hash = "sha256:29a912c074977db6adf3782dfbd414945805039b755d0c23979bc823f1b4e9c3", size = 4247115 },
+    { url = "https://files.pythonhosted.org/packages/52/0f/daedf2516c22cdb3ef208de286e77ebbf69da1c08cca3e086ecec057c738/pywavelets-1.7.0-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:6a322607b8c2985997ea45317d36cab58f0223ccf4c5b6540b612ed067d099ff", size = 4312598 },
+    { url = "https://files.pythonhosted.org/packages/e9/68/eb5a02ec3ade3076af47a4236f744ec6859506036976b93072bbf47cc8a3/pywavelets-1.7.0-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:0f402424288178fd105a5cb76e1818649dc67e4a08d1b9974c8c7ef01dc5feb3", size = 4283781 },
+    { url = "https://files.pythonhosted.org/packages/84/d0/3b839e6f05db4b6834fcc83f37e8bb6d7abdccfb8899000a2898c62d0c53/pywavelets-1.7.0-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:4ff81dd8288afdd5f2eae6c44f963152b41e14e2e5fc647b608c97bd6f8270fe", size = 4412092 },
+    { url = "https://files.pythonhosted.org/packages/c0/3c/55137ea3b137b9e7a72822275f51214b91f3c368c9eb3ea671e1e3bb0786/pywavelets-1.7.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:259ccf233879cf0ed66052ffd174dcabe6314e92b53aa2de25f4ae50b08ea1e3", size = 4444608 },
+    { url = "https://files.pythonhosted.org/packages/88/63/2fce3368cca2cc988723e6d48e68ce1056825675841fc1a9042629f8d1a9/pywavelets-1.7.0-cp313-cp313-musllinux_1_2_aarch64.whl", hash = "sha256:105249d2bf824bddfb286e4e08934ff1e8829aa3077dab74ce3b2921a09caa43", size = 4445280 },
+    { url = "https://files.pythonhosted.org/packages/5e/84/8d385d4a1e5ea79e166c3f65d6a58c76e5fa63106fa29c7c2c9deb03ddbb/pywavelets-1.7.0-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:eac60fdb28bd421f72eb18824bd2e4f36c3dab0d7f4802ebfe4bbf68744a524a", size = 4478438 },
+    { url = "https://files.pythonhosted.org/packages/2d/f0/35ae951344e3a5a7e6824aff9476032f4f2ebab3ef050c4d2d91321a7669/pywavelets-1.7.0-cp313-cp313-win32.whl", hash = "sha256:097bd03ee1b687942fa2f82ad0d35849879eef0ac82fc6f757d6ef881c53db6d", size = 4170479 },
+    { url = "https://files.pythonhosted.org/packages/19/11/e0b349efd034a40cc086e166edbed5c9fa59f27f298b42be4fb6004a82dc/pywavelets-1.7.0-cp313-cp313-win_amd64.whl", hash = "sha256:71918b973950c013c17ff28c3fc2958dfff68ec767ef60cd927a3ac4ff5a7345", size = 4246094 },
+    { url = "https://files.pythonhosted.org/packages/f9/39/8e39c95a7d99e731ab5bcb43ba40778b091a740178000823b56e19d90dcb/pywavelets-1.7.0-cp313-cp313t-macosx_11_0_arm64.whl", hash = "sha256:5b7e1a212269d3e48318388744684b702c6a649a70758e35e9a88614316e9b91", size = 4326062 },
+    { url = "https://files.pythonhosted.org/packages/8a/74/036d4a80a48d847161fb3f967239fcd49901809fc93cd25eab3a051f5300/pywavelets-1.7.0-cp313-cp313t-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:a0d8c641aa26e040d62166cbe2052dd3cd575e3e0c78c00c52770be6d7dd386b", size = 4441602 },
+    { url = "https://files.pythonhosted.org/packages/d7/76/a5ff1f1afe1e84c961c7e4b541684c2515ba4c529359f0ee2d9305cb9cd9/pywavelets-1.7.0-cp313-cp313t-musllinux_1_2_x86_64.whl", hash = "sha256:e0611ffb6ceeee1b677bd224e657895193eec03ad39538f5263ce61db465f836", size = 4466593 },
 ]
 
 [[package]]

@@ -8,4 +8,5 @@ dependencies = [
     "ipykernel>=6.29.5",
     "matplotlib>=3.9.2",
     "numpy>=2.1.2",
+    "pywavelets>=1.7.0",
 ]
